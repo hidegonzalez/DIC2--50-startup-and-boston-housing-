@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+.DS_Store
+*.log
+homework_images/
+teacher_*
+demo_page.html
