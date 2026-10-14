@@ -39,6 +39,18 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/model_data.js")
+def get_model_data_js():
+    """Serve model_data.js directly from root for static compatibility."""
+    return app.send_static_file("model_data.js")
+
+
+@app.route("/chart.umd.min.js")
+def get_chart_js():
+    """Serve local Chart.js fallback."""
+    return app.send_static_file("chart.umd.min.js")
+
+
 @app.route("/api/models", methods=["GET"])
 def get_models():
     """Return model data. Can filter by problem ('50startups', 'boston') and algorithm."""
